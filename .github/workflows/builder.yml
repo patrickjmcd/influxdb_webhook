@@ -31,16 +31,6 @@ jobs:
           echo ::set-output name=docker_username::patrickjmcd
           echo ::set-output name=docker_image::patrickjmcd/influxdb_webhook
 
-      - name: yarn install the app
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
-
-      - name: yarn build the app
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
         with:
